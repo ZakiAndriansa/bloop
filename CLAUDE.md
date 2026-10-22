@@ -90,6 +90,7 @@ Panduan langkah demi langkah per anggota (branch, Pull Request, konflik merge): 
 2. Sebelum push: `git pull origin main`, selesaikan konflik di laptop.
 3. Buat Pull Request ke `main`, minta satu anggota lain review.
 4. Pesan commit: `feat: ...`, `fix: ...`, `style: ...`.
+5. **WAJIB: jangan ada Claude di commit, push, atau Pull Request.** Jangan menambahkan baris `Co-Authored-By: Claude ...`, `Generated with Claude Code`, atau menyebut Claude di pesan commit maupun deskripsi PR. Commit hanya atas nama anggota kelompok yang mengerjakan.
 
 ## Menjalankan
 
