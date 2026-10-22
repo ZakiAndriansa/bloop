@@ -53,12 +53,17 @@
 /* ---------- Cerita ---------- */
 
 .story {
-    padding-block: clamp(80px, 12vw, 140px);
+    padding-top: clamp(80px, 12vw, 140px);
+    padding-bottom: clamp(140px, 18vw, 220px);
     text-align: center;
 }
 
+/* Badan awan splat-2 ada di sekitar 35% tinggi gambar (sisanya tetesan),
+   jadi titik itu yang disejajarkan dengan tengah teks. */
 .story .splat {
     width: min(120%, 820px);
+    top: calc(50% - clamp(30px, 3vw, 40px));
+    transform: translate(-50%, -35%);
 }
 
 .story__inner {
@@ -189,6 +194,13 @@
 
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .story .splat {
+        width: 175%;
+        top: 36%;
     }
 }
 
