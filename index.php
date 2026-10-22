@@ -13,7 +13,7 @@ $kategori = [
 $produk = [
     ['nama' => 'Kaos Langit', 'harga' => 129000, 'gambar' => 'produk-kaos-langit.jpg', 'badge' => null],
     ['nama' => 'Kaos Awan', 'harga' => 119000, 'gambar' => 'produk-kaos-awan.jpg', 'badge' => null],
-    ['nama' => 'Hoodie Kabut', 'harga' => 289000, 'gambar' => 'produk-hoodie-kabut.jpg', 'badge' => 'Edisi Terbatas'],
+    ['nama' => 'Hoodie Pasir', 'harga' => 289000, 'gambar' => 'produk-hoodie-pasir.jpg', 'badge' => 'Edisi Terbatas'],
     ['nama' => 'Flanel Merah', 'harga' => 219000, 'gambar' => 'produk-flanel-merah.jpg', 'badge' => null],
 ];
 
@@ -60,7 +60,7 @@ require __DIR__ . '/includes/header.php';
     <div class="category-grid">
         <?php foreach ($kategori as $k): ?>
             <article class="card category <?= e($k['kartu']) ?>">
-                <img class="img-lg category__img" src="assets/img/<?= e($k['gambar']) ?>" alt="Koleksi <?= e($k['nama']) ?>" loading="lazy" width="800" height="900">
+                <img class="img-lg category__img" src="assets/img/<?= e($k['gambar']) ?>" alt="Koleksi <?= e(strtolower($k['nama'])) ?> Bloop" loading="lazy" width="800" height="900">
                 <h3><?= e($k['nama']) ?></h3>
                 <p><?= e($k['teks']) ?></p>
             </article>
