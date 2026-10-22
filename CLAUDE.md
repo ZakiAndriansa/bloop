@@ -14,7 +14,7 @@ Brand baju fiktif **Bloop**. Empat halaman: halaman awal (`index.php`), pendafta
 
 | File | Pemilik |
 |---|---|
-| `includes/*`, `assets/css/base.css`, `assets/img/shapes/*`, `index.php`, `assets/css/home.css`, `proses/*`, `logout.php`, `CLAUDE.md` | Zaki |
+| `includes/*`, `assets/css/base.css`, `assets/img/shapes/*`, `index.php`, `assets/css/home.css`, `proses/*`, `logout.php`, `CLAUDE.md`, `docs/*` | Zaki |
 | `assets/css/auth.css`, `register.php`, `dashboard.php`, `assets/css/dashboard.css` | Aqil |
 | `login.php` (hanya bagian HTML), `README.md` | Darrell (pemula: jangan menulis CSS atau PHP baru, pakai kelas dan helper yang sudah ada) |
 
@@ -83,6 +83,8 @@ Untuk folder `proses/` (Zaki): `set_errors([...])`, `set_old([...])`, `set_flash
 3. **Dashboard:** `$user = current_user()` sudah tersedia, tampilkan `e($user['username'])`. Tombol keluar menuju `logout.php`.
 
 ## Alur kerja Git
+
+Panduan langkah demi langkah per anggota (branch, Pull Request, konflik merge): `docs/README-AQIL.md` dan `docs/README-DARRELL.md`.
 
 1. Jangan push langsung ke `main`. Kerjakan di branch sendiri: `feat/landing`, `feat/backend` (Zaki), `feat/auth-css`, `feat/register-dashboard` (Aqil), `feat/login-page` (Darrell).
 2. Sebelum push: `git pull origin main`, selesaikan konflik di laptop.
