@@ -44,12 +44,15 @@ body {
 
 main {
     flex: 1;
+    /* Bentuk dekoratif boleh keluar dari kotaknya, tapi tidak boleh membuat halaman bisa digeser ke samping. */
+    overflow-x: clip;
 }
 
 img,
 svg {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -274,6 +277,14 @@ p {
 .card--3 { background: var(--lilac); }
 .card--4 { background: var(--bubblegum); }
 
+/* Warna kartu langsung berdasarkan nama token */
+.card--tangerine { background: var(--tangerine); }
+.card--bubblegum { background: var(--bubblegum); }
+.card--lilac { background: var(--lilac); }
+.card--mint { background: var(--mint); }
+.card--sun { background: var(--sun); }
+.card--sky { background: var(--sky); }
+
 /* c. Gambar sudut membulat */
 .img-sm,
 .img-md,
@@ -297,6 +308,7 @@ p {
     position: absolute;
     z-index: -1;
     width: min(85%, 520px);
+    max-width: none;
     height: auto;
     color: var(--bubblegum);
     pointer-events: none;

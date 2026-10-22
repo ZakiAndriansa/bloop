@@ -49,7 +49,7 @@ Bentuk ini diambil dari hasil inspeksi wonky.com. Jangan memakai `clip-path`, li
 | | Kelas | Cara pakai |
 |---|---|---|
 | a | `.btn` | Tombol kapsul bergaris 3px. Warna: `.btn--tangerine`, `--bubblegum`, `--lilac`, `--mint`, `--sun`, `--sky`, `--cream`. Kecil: `.btn--sm`. Contoh: `<a class="btn btn--lilac" href="register.php">Gabung</a>` |
-| b | `.card` | Kartu radius 25px, latar putih. Warna bergiliran: `.card--1` tangerine, `.card--2` putih, `.card--3` lilac, `.card--4` bubblegum |
+| b | `.card` | Kartu radius 25px, latar putih. Warna bergiliran: `.card--1` tangerine, `.card--2` putih, `.card--3` lilac, `.card--4` bubblegum. Atau langsung pakai nama warna: `.card--tangerine`, `--bubblegum`, `--lilac`, `--mint`, `--sun`, `--sky` |
 | c | `.img-sm`, `.img-md`, `.img-lg` | Gambar dengan radius 10px, 16px, 30px |
 | d | `.splat` | Bentuk organik di belakang konten. Induknya diberi `.has-splat`. Pasang dengan PHP: `<?= shape('splat-1', 'splat splat--bubblegum splat--center') ?>`. Pilihan bentuk: `splat-1` (gumpalan), `splat-2` (awan bertetes). Posisi: `.splat--center`, `.splat--top-left`, `.splat--bottom-right`. Warna: `.splat--` + nama warna |
 | e | `.badge` | Lencana bergerigi berisi teks: `<?= badge('Baru!', 'sun') ?>` (teks, warna) |
@@ -90,6 +90,7 @@ Panduan langkah demi langkah per anggota (branch, Pull Request, konflik merge): 
 2. Sebelum push: `git pull origin main`, selesaikan konflik di laptop.
 3. Buat Pull Request ke `main`, minta satu anggota lain review.
 4. Pesan commit: `feat: ...`, `fix: ...`, `style: ...`.
+5. **WAJIB: jangan ada Claude di commit, push, atau Pull Request.** Jangan menambahkan baris `Co-Authored-By: Claude ...`, `Generated with Claude Code`, atau menyebut Claude di pesan commit maupun deskripsi PR. Commit hanya atas nama anggota kelompok yang mengerjakan.
 
 ## Menjalankan
 

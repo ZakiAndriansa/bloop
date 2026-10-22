@@ -1,1 +1,215 @@
-/* home.css: khusus index.php (milik Zaki, dikerjakan di branch feat/landing) */
+/* home.css: khusus index.php (milik Zaki) */
+
+/* ---------- Hero ---------- */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: clamp(32px, 6vw, 80px);
+    padding-block: clamp(48px, 8vw, 96px);
+}
+
+.eyebrow {
+    margin-bottom: 16px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero__lead {
+    max-width: 44ch;
+    font-size: 1.125rem;
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.hero__media {
+    justify-self: center;
+    width: min(100%, 440px);
+}
+
+.hero__media .splat {
+    width: 125%;
+}
+
+.hero__img {
+    --tilt: 3deg;
+    aspect-ratio: 10 / 11;
+}
+
+.hero__badge {
+    position: absolute;
+    top: -28px;
+    left: -36px;
+}
+
+/* ---------- Cerita ---------- */
+
+.story {
+    padding-block: clamp(80px, 12vw, 140px);
+    text-align: center;
+}
+
+.story .splat {
+    width: min(120%, 820px);
+}
+
+.story__inner {
+    max-width: 520px;
+}
+
+.story h2 {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+}
+
+.story__inner p {
+    font-size: 1.125rem;
+}
+
+/* ---------- Judul bagian ---------- */
+
+.section-head {
+    margin-bottom: 32px;
+}
+
+.section-head p {
+    margin: 0;
+}
+
+/* ---------- Kategori ---------- */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 28px;
+}
+
+.category__img {
+    aspect-ratio: 8 / 9;
+    margin-bottom: 20px;
+}
+
+.category h3 {
+    font-size: 1.75rem;
+}
+
+.category p {
+    margin: 0;
+}
+
+/* ---------- Produk ---------- */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product {
+    padding: 14px 14px 20px;
+}
+
+.product__media {
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.product__media .img-sm {
+    aspect-ratio: 1;
+}
+
+.product__badge {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+}
+
+.product__badge .badge {
+    width: 112px;
+    transform: rotate(10deg);
+}
+
+.product__badge .badge__text {
+    font-size: 0.7rem;
+}
+
+.product__name {
+    margin-bottom: 4px;
+    font-size: 1.15rem;
+}
+
+.product__price {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* ---------- Ajakan ---------- */
+
+.cta {
+    text-align: center;
+}
+
+.cta__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+/* ---------- Responsif ---------- */
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__media {
+        width: min(100%, 360px);
+        margin-top: 24px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        max-width: 460px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__badge {
+        left: -8px;
+    }
+
+    .hero__badge .badge {
+        width: 120px;
+    }
+
+    .product-grid {
+        gap: 12px;
+    }
+
+    .product__badge {
+        right: -8px;
+    }
+
+    .product__badge .badge {
+        width: 92px;
+    }
+}
