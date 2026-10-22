@@ -52,30 +52,34 @@
 
 /* ---------- Cerita ---------- */
 
+/* Semua ukuran bagian cerita diturunkan dari lebar awan (--cloud-w),
+   supaya teks selalu muat di badan awan dan tetesannya tidak menabrak bagian berikutnya.
+   Splat ada di dalam .story__inner, jadi top 50% = tengah teks.
+   Badan awan splat-2 berpusat di sekitar 39% tinggi gambar (di bawahnya tetesan). */
 .story {
-    padding-top: clamp(80px, 12vw, 140px);
-    padding-bottom: clamp(140px, 18vw, 220px);
+    --cloud-w: clamp(480px, 120vw, 840px);
+    padding-top: calc(var(--cloud-w) * 0.16 + 48px);
+    padding-bottom: calc(var(--cloud-w) * 0.36 + 16px);
     text-align: center;
 }
 
-/* Splat ada di dalam .story__inner, jadi top 50% = tengah teks.
-   Badan awan splat-2 berpusat di sekitar 39% tinggi gambar (di bawahnya tetesan),
-   jadi titik itu yang disejajarkan dengan tengah teks. */
 .story .splat {
-    width: min(160%, 820px);
+    width: var(--cloud-w);
     transform: translate(-50%, -39%);
 }
 
 .story__inner {
-    max-width: 520px;
+    max-width: calc(var(--cloud-w) * 0.66);
 }
 
 .story h2 {
-    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-size: clamp(1.35rem, 4.5vw, 2.75rem);
 }
 
 .story__inner p {
-    font-size: 1.125rem;
+    margin: 0;
+    font-size: clamp(0.88rem, 2.4vw, 1.1rem);
+    line-height: 1.5;
 }
 
 /* ---------- Judul bagian ---------- */
@@ -206,15 +210,6 @@
     .hero__media {
         width: min(100% - 40px, 300px);
         margin-top: 56px;
-    }
-
-    .story {
-        padding-top: 120px;
-        padding-bottom: 220px;
-    }
-
-    .story .splat {
-        width: 205%;
     }
 
     .category-grid {
