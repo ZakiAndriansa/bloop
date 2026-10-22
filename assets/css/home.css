@@ -55,7 +55,9 @@
 /* Semua ukuran bagian cerita diturunkan dari lebar awan (--cloud-w),
    supaya teks selalu muat di badan awan dan tetesannya tidak menabrak bagian berikutnya.
    Splat ada di dalam .story__inner, jadi top 50% = tengah teks.
-   Badan awan splat-2 berpusat di sekitar 39% tinggi gambar (di bawahnya tetesan). */
+   Badan awan splat-2 berpusat di sekitar 39% tinggi gambar (di bawahnya tetesan).
+   Dipakai 42% supaya teks sedikit lebih turun, karena tepi atas awan berupa tonjolan
+   sehingga secara visual ruang di atas terasa lebih sempit. */
 .story {
     --cloud-w: clamp(480px, 120vw, 840px);
     padding-top: calc(var(--cloud-w) * 0.16 + 48px);
@@ -65,7 +67,7 @@
 
 .story .splat {
     width: var(--cloud-w);
-    transform: translate(-50%, -39%);
+    transform: translate(-50%, -42%);
 }
 
 .story__inner {
