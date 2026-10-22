@@ -6,7 +6,7 @@ $pageCss = 'home.css';
 
 $kategori = [
     ['nama' => 'Kaos', 'teks' => 'Katun lembut, warna permen.', 'gambar' => 'kategori-kaos.jpg', 'kartu' => 'card--1'],
-    ['nama' => 'Hoodie', 'teks' => 'Hangat tanpa harus kalem.', 'gambar' => 'kategori-hoodie.jpg', 'kartu' => 'card--4'],
+    ['nama' => 'Hoodie', 'teks' => 'Hangat tanpa harus kalem.', 'gambar' => 'kategori-hoodie.jpg', 'kartu' => 'card--sun'],
     ['nama' => 'Kemeja', 'teks' => 'Rapi, tapi tetap main warna.', 'gambar' => 'kategori-kemeja.jpg', 'kartu' => 'card--3'],
 ];
 
