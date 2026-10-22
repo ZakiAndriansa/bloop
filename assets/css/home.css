@@ -52,25 +52,36 @@
 
 /* ---------- Cerita ---------- */
 
+/* Semua ukuran bagian cerita diturunkan dari lebar awan (--cloud-w),
+   supaya teks selalu muat di badan awan dan tetesannya tidak menabrak bagian berikutnya.
+   Splat ada di dalam .story__inner, jadi top 50% = tengah teks.
+   Badan awan splat-2 berpusat di sekitar 39% tinggi gambar (di bawahnya tetesan).
+   Dipakai 42% supaya teks sedikit lebih turun, karena tepi atas awan berupa tonjolan
+   sehingga secara visual ruang di atas terasa lebih sempit. */
 .story {
-    padding-block: clamp(80px, 12vw, 140px);
+    --cloud-w: clamp(480px, 120vw, 840px);
+    padding-top: calc(var(--cloud-w) * 0.16 + 48px);
+    padding-bottom: calc(var(--cloud-w) * 0.36 + 16px);
     text-align: center;
 }
 
 .story .splat {
-    width: min(120%, 820px);
+    width: var(--cloud-w);
+    transform: translate(-50%, -42%);
 }
 
 .story__inner {
-    max-width: 520px;
+    max-width: calc(var(--cloud-w) * 0.66);
 }
 
 .story h2 {
-    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-size: clamp(1.35rem, 4.5vw, 2.75rem);
 }
 
 .story__inner p {
-    font-size: 1.125rem;
+    margin: 0;
+    font-size: clamp(0.88rem, 2.4vw, 1.1rem);
+    line-height: 1.5;
 }
 
 /* ---------- Judul bagian ---------- */
@@ -172,19 +183,47 @@
 
 /* ---------- Responsif ---------- */
 
+/* Tablet: tetap berkolom, hanya diperkecil */
 @media (max-width: 900px) {
+    .hero {
+        gap: 32px;
+    }
+
+    .hero__badge {
+        left: -20px;
+    }
+
+    .hero__badge .badge {
+        width: 120px;
+    }
+
+    .category-grid,
+    .product-grid {
+        gap: 16px;
+    }
+
+    .category {
+        padding: 14px 14px 20px;
+    }
+
+    .category__img {
+        margin-bottom: 14px;
+    }
+
+    .category h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Tablet kecil dan HP besar */
+@media (max-width: 700px) {
     .hero {
         grid-template-columns: 1fr;
     }
 
     .hero__media {
-        width: min(100%, 360px);
-        margin-top: 24px;
-    }
-
-    .category-grid {
-        grid-template-columns: 1fr;
-        max-width: 460px;
+        width: min(100% - 40px, 340px);
+        margin-top: 56px;
     }
 
     .product-grid {
@@ -192,13 +231,31 @@
     }
 }
 
+/* HP */
+@media (max-width: 600px) {
+    .hero {
+        padding-top: 40px;
+    }
+
+    /* Beri ruang untuk badge yang menonjol di atas foto */
+    .hero__media {
+        width: min(100% - 40px, 300px);
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        max-width: 460px;
+        margin-inline: auto;
+    }
+
+    .category__img {
+        aspect-ratio: 4 / 3;
+    }
+}
+
 @media (max-width: 480px) {
     .hero__badge {
         left: -8px;
-    }
-
-    .hero__badge .badge {
-        width: 120px;
     }
 
     .product-grid {

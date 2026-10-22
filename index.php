@@ -43,9 +43,9 @@ require __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<section class="section story has-splat" id="tentang">
-    <?= shape('splat-2', 'splat splat--mint splat--center') ?>
-    <div class="container story__inner">
+<section class="section story" id="tentang">
+    <div class="container story__inner has-splat">
+        <?= shape('splat-2', 'splat splat--mint splat--center') ?>
         <h2>Lemari yang bikin senyum.</h2>
         <p>Kami percaya baju tidak harus abu-abu untuk terlihat keren. Setiap koleksi Bloop dirancang dalam jumlah kecil, dengan warna yang dipilih satu per satu supaya gampang dipadukan.</p>
     </div>
