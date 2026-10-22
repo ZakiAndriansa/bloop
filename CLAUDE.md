@@ -5,7 +5,7 @@ Brand baju fiktif **Bloop**. Empat halaman: halaman awal (`index.php`), pendafta
 ## Aturan wajib
 
 1. Hanya HTML, CSS, dan PHP. **Tanpa** database, tanpa file data (JSON, txt), tanpa framework, tanpa JavaScript.
-2. Akun hasil daftar disimpan di `$_SESSION`. Login dicek dengan if statement terhadap akun itu atau akun demo di `includes/config.php`.
+2. Pendaftaran menyimpan username dan password ke `$_SESSION['akun']` (`proses/register.php`). Login mencocokkan dengan akun itu memakai if statement (`proses/login.php`). Akun hilang bila browser ditutup, jadi daftar ulang sebelum mencoba login.
 3. Semua teks dari pengguna yang ditampilkan wajib lewat `e()`. Helper `old()`, `error()`, dan `flash()` sudah meng-escape hasilnya.
 4. Desain **mencontoh** wonky.com, **bukan menyalin**. Jangan memakai gambar, logo, teks, atau file apa pun dari wonky.com.
 5. Hanya ubah file milikmu (lihat tabel di bawah). Kalau butuh perubahan di file orang lain, minta ke pemiliknya.
@@ -64,10 +64,10 @@ Untuk halaman tampilan:
 
 ```php
 e($s)                // amankan teks untuk HTML
-old('email')         // nilai input lama setelah gagal submit
-error('email')       // pesan error untuk input itu, '' bila tidak ada
+old('username')      // nilai input lama setelah gagal submit
+error('username')    // pesan error untuk input itu, '' bila tidak ada
 flash()              // pesan sekali tampil, '' bila tidak ada
-current_user()       // ['name' => ..., 'email' => ...] atau null
+current_user()       // ['username' => ...] atau null
 is_logged_in()
 require_login()      // alihkan ke login.php bila belum login
 shape('splat-1', 'kelas')  // SVG bentuk inline
@@ -78,9 +78,9 @@ Untuk folder `proses/` (Zaki): `set_errors([...])`, `set_old([...])`, `set_flash
 
 ## Kontrak form
 
-1. **Daftar:** `<form method="post" action="proses/register.php">`, input `name`, `email`, `password`, `password_confirm`. Error per input lewat `error('nama_input')`.
-2. **Login:** `<form method="post" action="proses/login.php">`, input `email`, `password`. Pesan sukses lewat `flash()`, pesan gagal lewat `error('login')`.
-3. **Dashboard:** `$user = current_user()` sudah tersedia. Tombol keluar menuju `logout.php`.
+1. **Daftar:** `<form method="post" action="proses/register.php">`, input `username` (type text), `password`, `password_confirm`. Username lama lewat `old('username')`, error per input lewat `error('nama_input')`.
+2. **Login:** `<form method="post" action="proses/login.php">`, input `username` (type text), `password`. Username lama lewat `old('username')`, pesan sukses lewat `flash()`, pesan gagal lewat `error('login')`.
+3. **Dashboard:** `$user = current_user()` sudah tersedia, tampilkan `e($user['username'])`. Tombol keluar menuju `logout.php`.
 
 ## Alur kerja Git
 
@@ -93,4 +93,4 @@ Untuk folder `proses/` (Zaki): `set_errors([...])`, `set_old([...])`, `set_flash
 
 Laragon: folder di `C:\laragon\www\bloop`, buka `http://localhost/bloop/` atau `http://bloop.test`.
 XAMPP: folder di `C:\xampp\htdocs\bloop`, buka `http://localhost/bloop/`.
-Akun demo: lihat `includes/config.php`.
+Untuk mencoba login: daftar dulu di `register.php`, lalu login dengan username dan password yang sama.

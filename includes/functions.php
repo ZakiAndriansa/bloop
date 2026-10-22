@@ -51,7 +51,7 @@ function flash(): string
     return e(take_once('flash') ?? '');
 }
 
-/** ['name' => ..., 'email' => ...] atau null bila belum login. */
+/** ['username' => ...] atau null bila belum login. */
 function current_user(): ?array
 {
     return $_SESSION['user'] ?? null;

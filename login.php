@@ -14,13 +14,12 @@ require __DIR__ . '/includes/header.php';
  *
  *   <form method="post" action="proses/login.php">
  *   Input wajib, name persis seperti ini:
- *     name="email"     (type="email")
+ *     name="username"  (type="text")
  *     name="password"  (type="password")
  *
- *   Nilai email lama:          value="<?= old('email') ?>"
+ *   Nilai username lama:        value="<?= old('username') ?>"
  *   Pesan sukses setelah daftar: <?= flash() ?>          tampilkan di .alert .alert-success bila tidak kosong
  *   Pesan gagal login:          <?= error('login') ?>    tampilkan di .alert bila tidak kosong
- *   Akun demo untuk dicoba:     <?= e(DEMO_EMAIL) ?> dan <?= e(DEMO_PASSWORD) ?>
  *   Semua fungsi di atas sudah meng-escape hasilnya.
  *
  *   Contoh menampilkan pesan hanya bila ada isinya:

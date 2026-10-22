@@ -10,15 +10,14 @@ require __DIR__ . '/includes/header.php';
 
 /*
  * DATA YANG TERSEDIA
- *   <?= e($user['name']) ?>   nama pengguna
- *   <?= e($user['email']) ?>  email pengguna
- *   Tombol keluar:            <a class="btn btn--tangerine" href="logout.php">Keluar</a>
+ *   <?= e($user['username']) ?>  username yang sedang login
+ *   Tombol keluar:               <a class="btn btn--tangerine" href="logout.php">Keluar</a>
  */
 ?>
 
 <?php /* ISI HTML DI SINI (Aqil). Hapus placeholder di bawah. */ ?>
 <section class="container section">
-    <h1>Halo, <?= e($user['name']) ?>!</h1>
+    <h1>Halo, <?= e($user['username']) ?>!</h1>
     <p>Halaman dashboard sedang dikerjakan.</p>
     <a class="btn btn--tangerine" href="logout.php">Keluar</a>
 </section>

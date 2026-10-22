@@ -14,13 +14,12 @@ require __DIR__ . '/includes/header.php';
  *
  *   <form method="post" action="proses/register.php">
  *   Input wajib, name persis seperti ini:
- *     name="name"              (nama lengkap)
- *     name="email"             (type="email")
+ *     name="username"          (type="text")
  *     name="password"          (type="password")
  *     name="password_confirm"  (type="password")
  *
- *   Nilai lama setelah gagal submit:  value="<?= old('name') ?>"  dan  value="<?= old('email') ?>"
- *   Error di bawah tiap input:        <?= error('name') ?>, error('email'), error('password'), error('password_confirm')
+ *   Nilai lama setelah gagal submit:  value="<?= old('username') ?>"
+ *   Error di bawah tiap input:        <?= error('username') ?>, error('password'), error('password_confirm')
  *   Pesan umum (bila ada):            <?= flash() ?>
  *   Semua fungsi di atas sudah meng-escape hasilnya.
  */
