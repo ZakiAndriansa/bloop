@@ -70,6 +70,17 @@ function require_login(): void
 }
 
 /**
+ * Alamat file di folder assets dengan versi (waktu terakhir diubah),
+ * supaya browser tidak memakai CSS lama dari cache.
+ */
+function asset(string $path): string
+{
+    $file = __DIR__ . '/../assets/' . $path;
+    $version = is_file($file) ? filemtime($file) : 0;
+    return 'assets/' . $path . '?v=' . $version;
+}
+
+/**
  * Sisipkan SVG bentuk dari assets/img/shapes secara inline,
  * supaya warnanya bisa diatur lewat CSS (fill="currentColor").
  * Contoh: <?= shape('splat-1', 'splat splat--bubblegum splat--center') ?>
