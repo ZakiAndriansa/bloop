@@ -58,12 +58,12 @@
     text-align: center;
 }
 
-/* Badan awan splat-2 ada di sekitar 35% tinggi gambar (sisanya tetesan),
+/* Splat ada di dalam .story__inner, jadi top 50% = tengah teks.
+   Badan awan splat-2 berpusat di sekitar 39% tinggi gambar (di bawahnya tetesan),
    jadi titik itu yang disejajarkan dengan tengah teks. */
 .story .splat {
-    width: min(120%, 820px);
-    top: calc(50% - clamp(30px, 3vw, 40px));
-    transform: translate(-50%, -35%);
+    width: min(160%, 820px);
+    transform: translate(-50%, -39%);
 }
 
 .story__inner {
@@ -199,8 +199,7 @@
 
 @media (max-width: 600px) {
     .story .splat {
-        width: 175%;
-        top: 36%;
+        width: 205%;
     }
 }
 
