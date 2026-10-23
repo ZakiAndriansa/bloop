@@ -1,1 +1,156 @@
-/* dashboard.css: khusus dashboard.php (milik Aqil, dikerjakan di branch feat/register-dashboard) */
+/* =========================================================
+   dashboard.css: khusus dashboard.php (milik Aqil)
+   Branch: feat/register-dashboard
+   ========================================================= */
+
+/* ---------- Banner Sapaan ---------- */
+
+.dash-banner {
+    text-align: center;
+    padding: clamp(36px, 6vw, 64px) clamp(20px, 4vw, 40px);
+    margin-bottom: 32px;
+    border: var(--line);
+    overflow: hidden;
+}
+
+.dash-banner__badge {
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.dash-banner__title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    color: var(--ink);
+}
+
+.dash-banner__lead {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.5;
+    max-width: 520px;
+    margin: 0 auto;
+    color: var(--ink);
+    opacity: 0.85;
+}
+
+/* ---------- Card Info Akun ---------- */
+
+.dash-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border: var(--line);
+    margin-bottom: 48px;
+}
+
+.dash-info__details h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--ink);
+}
+
+.dash-info__details p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--ink);
+    margin-bottom: 4px;
+}
+
+.dash-info__status span {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 100px;
+    background: var(--mint);
+    border: var(--line);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
+
+.dash-info__action .btn {
+    white-space: nowrap;
+}
+
+/* ---------- Rekomendasi Grid ---------- */
+
+.dash-recommendations {
+    margin-top: 16px;
+}
+
+.dash-recommendations .section-head {
+    margin-bottom: 28px;
+}
+
+.dash-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 3vw, 32px);
+}
+
+.dash-card {
+    border: var(--line);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dash-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 0 var(--ink);
+}
+
+.dash-card img {
+    margin-bottom: 16px;
+    height: 220px;
+    object-fit: cover;
+    border: var(--line);
+}
+
+.dash-card__content h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ink);
+}
+
+.dash-card__content p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: var(--ink);
+    opacity: 0.85;
+}
+
+/* ---------- Responsif ---------- */
+
+@media (max-width: 768px) {
+    .dash-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dash-info__action {
+        width: 100%;
+    }
+
+    .dash-info__action .btn {
+        width: 100%;
+    }
+
+    .dash-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dash-card img {
+        height: 260px;
+    }
+}
