@@ -1,10 +1,3 @@
-/* =========================================================
-   dashboard.css: khusus dashboard.php (milik Aqil)
-   Branch: feat/register-dashboard
-   ========================================================= */
-
-/* ---------- Banner Sapaan ---------- */
-
 .dash-banner {
     text-align: center;
     padding: clamp(36px, 6vw, 64px) clamp(20px, 4vw, 40px);
@@ -35,8 +28,6 @@
     color: var(--ink);
     opacity: 0.85;
 }
-
-/* ---------- Card Info Akun ---------- */
 
 .dash-info {
     display: flex;
@@ -78,8 +69,6 @@
 .dash-info__action .btn {
     white-space: nowrap;
 }
-
-/* ---------- Rekomendasi Grid ---------- */
 
 .dash-recommendations {
     margin-top: 16px;
@@ -130,7 +119,7 @@
     opacity: 0.85;
 }
 
-/* ---------- Responsif ---------- */
+/* Responsif */
 
 @media (max-width: 768px) {
     .dash-info {

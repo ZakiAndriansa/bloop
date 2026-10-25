@@ -8,17 +8,11 @@ $title = 'Dashboard';
 $pageCss = 'dashboard.css';
 require __DIR__ . '/includes/header.php';
 
-/*
- * DATA YANG TERSEDIA
- *   <?= e($user['username']) ?>  username yang sedang login
- *   Tombol keluar:               <a class="btn btn--tangerine" href="logout.php">Keluar</a>
- */
 ?>
 
-<?php /* ISI HTML DI SINI (Aqil). Hapus placeholder di bawah. */ ?>
 <section class="container section">
 
-    <!-- Banner sapaan berlatar sun dengan splat dan badge Member Baru -->
+    <!-- Say Hello Banner -->
     <div class="card card--sun dash-banner has-splat">
         <?= shape('splat-2', 'splat splat--tangerine splat--center') ?>
         <div class="dash-banner__badge">
@@ -28,7 +22,6 @@ require __DIR__ . '/includes/header.php';
         <p class="dash-banner__lead">Selamat datang di Bloop Club. Eksplorasi gaya ceriamu hari ini.</p>
     </div>
 
-    <!-- Info Akun & Tombol Keluar -->
     <div class="card card--2 dash-info">
         <div class="dash-info__details">
             <h3>Info Akun</h3>
@@ -40,7 +33,6 @@ require __DIR__ . '/includes/header.php';
         </div>
     </div>
 
-    <!-- Rekomendasi untukmu (3 Card Berwarna) -->
     <div class="dash-recommendations">
         <div class="section-head">
             <h2>Rekomendasi untukmu</h2>

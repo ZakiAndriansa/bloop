@@ -1,5 +1,4 @@
 <?php
-// Sebelum include file ini, isi $title dan (opsional) $pageCss.
 $title = $title ?? 'Bloop';
 $pageCss = $pageCss ?? null;
 ?>

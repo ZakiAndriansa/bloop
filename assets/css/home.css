@@ -1,6 +1,4 @@
-/* home.css: khusus index.php (milik Zaki) */
-
-/* ---------- Hero ---------- */
+/* Hero */
 
 .hero {
     display: grid;
@@ -50,14 +48,6 @@
     left: -36px;
 }
 
-/* ---------- Cerita ---------- */
-
-/* Semua ukuran bagian cerita diturunkan dari lebar awan (--cloud-w),
-   supaya teks selalu muat di badan awan dan tetesannya tidak menabrak bagian berikutnya.
-   Splat ada di dalam .story__inner, jadi top 50% = tengah teks.
-   Badan awan splat-2 berpusat di sekitar 39% tinggi gambar (di bawahnya tetesan).
-   Dipakai 42% supaya teks sedikit lebih turun, karena tepi atas awan berupa tonjolan
-   sehingga secara visual ruang di atas terasa lebih sempit. */
 .story {
     --cloud-w: clamp(480px, 120vw, 840px);
     padding-top: calc(var(--cloud-w) * 0.16 + 48px);
@@ -84,8 +74,6 @@
     line-height: 1.5;
 }
 
-/* ---------- Judul bagian ---------- */
-
 .section-head {
     margin-bottom: 32px;
 }
@@ -93,8 +81,6 @@
 .section-head p {
     margin: 0;
 }
-
-/* ---------- Kategori ---------- */
 
 .category-grid {
     display: grid;
@@ -120,8 +106,6 @@
 .category p {
     margin: 0;
 }
-
-/* ---------- Produk ---------- */
 
 .product-grid {
     display: grid;
@@ -167,8 +151,6 @@
     font-weight: 600;
 }
 
-/* ---------- Ajakan ---------- */
-
 .cta {
     text-align: center;
 }
@@ -181,9 +163,7 @@
     margin-top: 24px;
 }
 
-/* ---------- Responsif ---------- */
-
-/* Tablet: tetap berkolom, hanya diperkecil */
+/* Tablet */
 @media (max-width: 900px) {
     .hero {
         gap: 32px;
@@ -236,8 +216,7 @@
     .hero {
         padding-top: 40px;
     }
-
-    /* Beri ruang untuk badge yang menonjol di atas foto */
+    
     .hero__media {
         width: min(100% - 40px, 300px);
     }

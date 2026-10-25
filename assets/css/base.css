@@ -1,9 +1,3 @@
-/* =========================================================
-   Bloop: base.css (milik Zaki)
-   Token warna, font, layout dasar, dan kelas bentuk a sampai g.
-   Bentuk hanya yang dipakai wonky.com, jangan menambah bentuk lain.
-   ========================================================= */
-
 :root {
     --cream: #FFF6EC;
     --ink: #1F2A44;
@@ -22,7 +16,7 @@
     --container: 1200px;
 }
 
-/* ---------- Reset ringan ---------- */
+/* CSS Reset */
 
 *,
 *::before,
@@ -44,7 +38,6 @@ body {
 
 main {
     flex: 1;
-    /* Bentuk dekoratif boleh keluar dari kotaknya, tapi tidak boleh membuat halaman bisa digeser ke samping. */
     overflow-x: clip;
 }
 
@@ -103,7 +96,7 @@ p {
     white-space: nowrap;
 }
 
-/* ---------- Top bar dan navbar ---------- */
+/* Top bar dan navbar */
 
 .topbar {
     padding: 6px 16px;
@@ -179,7 +172,7 @@ p {
     }
 }
 
-/* ---------- Footer ---------- */
+/* Footer */
 
 .footer {
     margin-top: auto;
@@ -216,11 +209,6 @@ p {
     opacity: 0.75;
 }
 
-/* =========================================================
-   KELAS BENTUK (a sampai g)
-   ========================================================= */
-
-/* a. Tombol kapsul bergaris tebal */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -264,7 +252,6 @@ p {
 .btn--sky { background: var(--sky); }
 .btn--cream { background: var(--cream); }
 
-/* b. Kartu sudut membulat berwarna */
 .card {
     position: relative;
     padding: clamp(24px, 4vw, 40px);
@@ -277,7 +264,6 @@ p {
 .card--3 { background: var(--lilac); }
 .card--4 { background: var(--bubblegum); }
 
-/* Warna kartu langsung berdasarkan nama token */
 .card--tangerine { background: var(--tangerine); }
 .card--bubblegum { background: var(--bubblegum); }
 .card--lilac { background: var(--lilac); }
@@ -285,7 +271,6 @@ p {
 .card--sun { background: var(--sun); }
 .card--sky { background: var(--sky); }
 
-/* c. Gambar sudut membulat */
 .img-sm,
 .img-md,
 .img-lg {
@@ -297,8 +282,6 @@ p {
 .img-md { border-radius: 16px; }
 .img-lg { border-radius: 30px; }
 
-/* d. Splat organik, dipasang lewat shape('splat-1' atau 'splat-2', ...).
-      Induknya diberi .has-splat supaya splat berada di belakang konten. */
 .has-splat {
     position: relative;
     isolation: isolate;
@@ -337,7 +320,6 @@ p {
 .splat--sun { color: var(--sun); }
 .splat--sky { color: var(--sky); }
 
-/* e. Lencana bergerigi, dipasang lewat badge('Teks', 'warna') */
 .badge {
     position: relative;
     display: inline-grid;
@@ -375,7 +357,6 @@ p {
 .badge--sun { color: var(--sun); }
 .badge--sky { color: var(--sky); }
 
-/* f. Gambar produk melayang (pakai foto tanpa latar) */
 .float-item {
     animation: float 6s ease-in-out infinite;
 }
@@ -388,8 +369,6 @@ p {
     50% { transform: translateY(-14px) rotate(var(--tilt, 0deg)); }
 }
 
-/* g. Teks besar berjalan.
-      Isi .marquee__track dengan dua salinan teks yang sama supaya putarannya mulus. */
 .marquee {
     overflow: hidden;
     padding-block: 16px;

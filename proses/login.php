@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../includes/config.php';
 
-// Halaman ini hanya menerima kiriman form.
+// Hanya menerima POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect('../login.php');
 }
